@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Random;
 
 /*
 * 类描述：
@@ -28,6 +29,13 @@ public class RegistryCenter {
         instance.forEach(t->{
             System.out.println(t+"---"+client.getInstances(t));
         });
+        int sleepTime = new Random().nextInt(3000);
+        System.out.println("sleepTime:" + sleepTime);
+        try {
+            Thread.sleep(sleepTime);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "Hello World";
     }
 
