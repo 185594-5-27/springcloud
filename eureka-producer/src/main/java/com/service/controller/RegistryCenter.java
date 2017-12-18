@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -22,6 +23,17 @@ public class RegistryCenter {
 
     @Autowired
     private DiscoveryClient client;
+
+    @RequestMapping(value = "/findAll", method= RequestMethod.GET)
+    public List<String> findAll(String ids){
+        System.out.println("----接收到的数据-----"+ids);
+        List<String> stringList = new ArrayList<String>();
+        String [] id_array = ids.split(",");
+        for(int i=0;i<id_array.length;i++){
+            stringList.add(id_array[i]+"测试数据");
+        }
+        return stringList;
+    }
 
     @RequestMapping(value = "/hello", method= RequestMethod.GET)
     public String index() {

@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 * 类描述：
 * @auther linzf
@@ -23,6 +26,20 @@ public class ConsumerController {
     public String helloConsumer (){
         System.out.println("-----------------");
         return consumerService.helloConsumer();
+    }
+
+    @RequestMapping(value = "/findAll",method = RequestMethod.GET)
+    @ResponseBody
+    public  List<String> findAll (String id){
+        List<String> stringList = new ArrayList<String>();
+        stringList.add(id);
+        return consumerService.findAll(stringList);
+    }
+
+    @RequestMapping(value = "/find",method = RequestMethod.GET)
+    @ResponseBody
+    public  String find (String id){
+        return consumerService.find(id);
     }
 
 
