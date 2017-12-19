@@ -41,7 +41,7 @@ public class RegistryCenter {
         instance.forEach(t->{
             System.out.println(t+"---"+client.getInstances(t));
         });
-        int sleepTime = new Random().nextInt(3000);
+        int sleepTime = new Random().nextInt(5000);
         System.out.println("sleepTime:" + sleepTime);
         try {
             Thread.sleep(sleepTime);

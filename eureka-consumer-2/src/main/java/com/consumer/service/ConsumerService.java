@@ -8,11 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-
 import java.util.List;
 
 import static com.netflix.hystrix.HystrixCollapser.Scope.GLOBAL;
-import static com.netflix.hystrix.HystrixCollapser.Scope.REQUEST;
 
 /*
 * 类描述：
