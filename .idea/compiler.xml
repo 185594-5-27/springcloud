@@ -6,19 +6,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="actuator" />
         <module name="eureka-consumer" />
+        <module name="eureka-consumer-2" />
         <module name="eureka-producer" />
         <module name="eureka-server" />
         <module name="eureka-server2" />
+        <module name="feign-consumer" />
+        <module name="hystrix-dashboard" />
+        <module name="turbine" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="actuator" target="1.8" />
       <module name="eureka-consumer" target="1.8" />
+      <module name="eureka-consumer-2" target="1.8" />
       <module name="eureka-producer" target="1.8" />
       <module name="eureka-server" target="1.8" />
       <module name="eureka-server2" target="1.8" />
+      <module name="feign-consumer" target="1.8" />
+      <module name="hystrix-dashboard" target="1.8" />
       <module name="spring-boot-starter-actuator" target="1.8" />
+      <module name="turbine" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
