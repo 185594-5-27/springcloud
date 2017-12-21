@@ -1,4 +1,4 @@
-package com.feign.fallback;
+package com.feign.service;
 
 import com.feign.service.HelloService;
 import org.springframework.stereotype.Component;
