@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Scope;
 * @auther linzf
 * @create 2017/12/21 0021 
 */
-@Configuration
 public class DisableHystrixConfiguration {
 
     @Bean

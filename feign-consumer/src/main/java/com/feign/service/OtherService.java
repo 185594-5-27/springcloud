@@ -1,5 +1,6 @@
 package com.feign.service;
 
+import com.feign.config.FullLogConfiguration;
 import com.feign.entity.User;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Created by Administrator on 2017/12/20 0020.
  * 通过增加configuration来实现关闭断路器的功能
  */
-@FeignClient(value="EUREKA-PRODUCER")
+@FeignClient(value="EUREKA-PRODUCER",configuration = FullLogConfiguration.class)
 public interface OtherService {
 
     @RequestMapping("/findAll")
