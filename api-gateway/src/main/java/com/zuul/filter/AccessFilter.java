@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /*
 * 类描述：
@@ -59,8 +60,11 @@ public class AccessFilter extends ZuulFilter {
         if(accessToken == null) {
             log.warn("access token is empty");
             ctx.setSendZuulResponse(false);
+            // 401错误表示需要登陆才可以
             ctx.setResponseStatusCode(401);
-            return null;
+            //为了被error过滤器捕获
+            ctx.set("error.status_code", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            ctx.set("error.exception",new RuntimeException("AccessToken不允许为空！"));
         }
         return null;
     }
