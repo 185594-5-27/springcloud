@@ -15,9 +15,8 @@ public class ApiGatewayApplication {
 	}
 
 	@Bean
-	public AccessFilter accessFilter(){
+	public AccessFilter accessFilter() {
 		return new AccessFilter();
 	}
+}
 
-
-	}
