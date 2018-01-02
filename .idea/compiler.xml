@@ -8,6 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="actuator" />
         <module name="api-gateway" />
+        <module name="config-client" />
+        <module name="config-server" />
         <module name="eureka-consumer" />
         <module name="eureka-consumer-2" />
         <module name="eureka-producer" />
@@ -21,6 +23,8 @@
     <bytecodeTargetLevel>
       <module name="actuator" target="1.8" />
       <module name="api-gateway" target="1.8" />
+      <module name="config-client" target="1.8" />
+      <module name="config-server" target="1.8" />
       <module name="eureka-consumer" target="1.8" />
       <module name="eureka-consumer-2" target="1.8" />
       <module name="eureka-producer" target="1.8" />
