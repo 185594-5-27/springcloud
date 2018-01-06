@@ -19,6 +19,7 @@
         <module name="hystrix-dashboard" />
         <module name="rabbitmq-hello" />
         <module name="turbine" />
+        <module name="zipkin-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -36,6 +37,7 @@
       <module name="rabbitmq-hello" target="1.8" />
       <module name="spring-boot-starter-actuator" target="1.8" />
       <module name="turbine" target="1.8" />
+      <module name="zipkin-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
